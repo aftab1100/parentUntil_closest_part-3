@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>parentUntil</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      div {
+        border: 10px solid red;
+        padding: 10px;
+      }
+      div > ul {
+        border: 10px solid green;
+        padding: 10px;
+      }
+      div > ul > li {
+        border: 10px solid blue;
+        padding: 10px;
+      }
+      div > ul > li > span {
+        display: block;
+        border: 10px solid orange;
+        padding: 10px;
+      }
+    </style>
+    <script>
+      //1.Page load
+      //1.i -> (two eyes)(one noise) => (function($){})(jQuery)
+      //1.ii -> $(document).ready();
+      //1.iii -> jQuery(function($){});
+    </script>
+  </head>
+  <body>
+    <div>
+      DIV
+      <ul>
+        UL
+        <li>
+          LI
+          <span>Span</span>
+        </li>
+      </ul>
+    </div>
+    <script>
+      //1.Page load
+      //1.i -> (two eyes)(one noise) => (function($){})(jQuery)
+      //1.ii -> $(document).ready();
+      //1.iii -> jQuery(function($){});
+
+      //2.Direct
+      //$(selector).action();
+      $("span").parentsUntil("div").css({ "border-color": " pink" });
+    </script>
+  </body>
+</html>

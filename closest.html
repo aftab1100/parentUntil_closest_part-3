@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closest</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      div {
+        border: 10px solid red;
+        padding: 10px;
+      }
+      div > ul {
+        border: 10px solid green;
+        padding: 10px;
+      }
+      div > ul > li {
+        border: 10px solid blue;
+        padding: 10px;
+      }
+      div > ul > li > span {
+        display: block;
+        border: 10px solid orange;
+        padding: 10px;
+      }
+    </style>
+    <script>
+      //1.Page load
+      //1.i -> (two eyes)(one noise) => (function($){})(jQuery)
+      //1.ii -> $(document).ready();
+      //1.iii -> jQuery(function($){});
+
+      //1.ii use
+      $(document).ready(function ($) {
+        //$(selector).action();
+        $("span").closest("div").css("border", "20px solid black");
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <div>
+        <ul>
+          <li><span>Hello_1</span></li>
+          <li><span>Hello_2</span></li>
+          <li><span>Hello_3</span></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
